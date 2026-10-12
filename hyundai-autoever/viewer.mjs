@@ -26,7 +26,7 @@ const viewer = new PDFViewer({
 
 linkService.setViewer(viewer);
 eventBus.on("pagesinit", () => {
-  viewer.currentScaleValue = "page-fit";
+  viewer.currentScale = 0.5;
 });
 eventBus.on("pagerendered", ({ pageNumber }) => {
   if (pageNumber === 1) status.hidden = true;
