@@ -34,7 +34,7 @@ eventBus.on("pagerendered", ({ pageNumber }) => {
 
 try {
   const document = await pdfjsLib.getDocument({
-    url: "./pdf/hyundai-autoever.pdf?v=b3e39b72",
+    url: "./pdf/hyundai-autoever.pdf?v=e2951ac3",
   }).promise;
   viewer.setDocument(document);
   linkService.setDocument(document);
