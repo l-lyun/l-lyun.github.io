@@ -26,7 +26,7 @@ const viewer = new PDFViewer({
 
 linkService.setViewer(viewer);
 eventBus.on("pagesinit", () => {
-  viewer.currentScale = 0.5;
+  viewer.currentScale = 0.6;
 });
 eventBus.on("pagerendered", ({ pageNumber }) => {
   if (pageNumber === 1) status.hidden = true;
@@ -34,7 +34,7 @@ eventBus.on("pagerendered", ({ pageNumber }) => {
 
 try {
   const document = await pdfjsLib.getDocument({
-    url: "./pdf/hyundai-autoever.pdf",
+    url: "./pdf/hyundai-autoever.pdf?v=b3e39b72",
   }).promise;
   viewer.setDocument(document);
   linkService.setDocument(document);
